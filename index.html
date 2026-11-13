@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Clothes in Ancient Greece &amp; Rome — 3°A</title>
+<style>
+  :root{
+    --marble:#f7f3ea; --cream:#fffdf7; --ink:#2b2b2b; --muted:#6b6357;
+    --terracotta:#b4472e; --gold:#c9a227; --navy:#1f3a5f; --line:#e2d8c4;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0; font-family:Georgia,'Times New Roman',serif; color:var(--ink);
+    background:radial-gradient(circle at 20% 10%,#ffffff88,transparent 40%),
+               radial-gradient(circle at 80% 30%,#ffffff66,transparent 40%), var(--marble);
+    line-height:1.55;
+  }
+  header{background:var(--navy);color:#fff;text-align:center;padding:18px 14px 12px;border-bottom:5px solid var(--gold);}
+  header h1{margin:0;font-size:clamp(1.2rem,3.5vw,2rem);letter-spacing:.5px;}
+  header p{margin:6px 0 0;color:#e9d9a8;font-size:.95rem;}
+  nav{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;padding:12px;background:var(--cream);border-bottom:2px solid var(--line);position:sticky;top:0;z-index:50;}
+  nav button,.namecard{
+    font-family:inherit;font-size:.95rem;cursor:pointer;background:#fff;color:var(--navy);
+    border:2px solid var(--navy);border-radius:999px;padding:8px 16px;transition:.15s;
+  }
+  nav button:hover,.namecard:hover{background:var(--navy);color:#fff;}
+  nav button.active{background:var(--terracotta);border-color:var(--terracotta);color:#fff;}
+  #langBtn{border-color:var(--gold);background:var(--gold);color:#3a2c00;font-weight:bold;}
+  #langBtn:hover{background:#b08d1c;color:#fff;}
+
+  main{max-width:980px;margin:0 auto;padding:22px 14px 60px;}
+  .page{display:none;}
+  .page.active{display:block;animation:fade .25s ease;}
+  @keyframes fade{from{opacity:0;transform:translateY(6px);}to{opacity:1;transform:none;}}
+
+  .speaker{display:inline-block;background:var(--terracotta);color:#fff;border-radius:999px;padding:3px 14px;font-size:.8rem;letter-spacing:1px;text-transform:uppercase;margin-bottom:10px;}
+  h2{color:var(--navy);border-bottom:3px solid var(--gold);padding-bottom:6px;margin-top:4px;}
+  h3{color:var(--terracotta);margin-bottom:4px;}
+
+  .card{background:var(--cream);border:1px solid var(--line);border-radius:14px;padding:16px 18px;margin:14px 0;box-shadow:0 2px 8px #0000000d;}
+  .en{font-size:1.05rem;display:block;}
+  .es{display:none;margin-top:6px;padding-left:12px;border-left:3px solid var(--gold);color:var(--muted);font-style:italic;font-size:.98rem;}
+  body.show-es .es{display:block;}
+
+  .withimg{display:flex;gap:20px;align-items:center;}
+  .withimg .txt{flex:1 1 320px;min-width:0;}
+  .withimg .art{flex:0 0 150px;display:flex;justify-content:center;align-items:center;}
+  .withimg .art svg{width:150px;height:auto;}
+  .withimg .art.wide{flex:0 0 190px;}
+  .withimg .art.wide svg{width:190px;}
+  @media(max-width:680px){
+    .withimg{flex-direction:column;align-items:stretch;}
+    .withimg .art{order:-1;}
+    .withimg .art svg{width:130px;}
+    .withimg .art.wide svg{width:180px;}
+  }
+
+  .hero{text-align:center;padding:10px 0 4px;}
+  .hero .big{font-size:clamp(1.4rem,4vw,2.2rem);color:var(--navy);font-weight:bold;}
+  .hero .sub{color:var(--terracotta);font-size:1.1rem;margin-top:6px;}
+  #heroArt{max-width:420px;margin:14px auto 0;}
+  #heroArt svg{width:100%;height:auto;}
+  .names{display:flex;flex-wrap:wrap;gap:14px;justify-content:center;margin-top:22px;}
+  .namecard{padding:16px 22px;border-radius:16px;font-size:1.1rem;display:flex;align-items:center;gap:12px;}
+  .namecard svg{width:34px;height:56px;}
+  .namecard small{display:block;color:var(--muted);font-size:.8rem;margin-top:2px;font-weight:normal;}
+  .namecard:hover small{color:#e9d9a8;}
+
+  table{width:100%;border-collapse:collapse;margin-top:10px;font-size:.95rem;}
+  th,td{border:1px solid var(--line);padding:8px 10px;text-align:left;}
+  th{background:var(--navy);color:#fff;}
+  tr:nth-child(even) td{background:#faf6ec;}
+
+  ol.facts{list-style:none;padding:0;}
+  ol.facts li{display:flex;gap:12px;align-items:flex-start;margin-bottom:12px;}
+  ol.facts li svg{flex:0 0 44px;width:44px;height:44px;}
+
+  .src{border-left:4px solid var(--gold);padding:8px 0 8px 14px;margin:12px 0;}
+  .src a{color:var(--navy);word-break:break-all;}
+  .src .why{display:block;color:var(--muted);font-size:.88rem;margin-top:2px;}
+  .note{font-size:.9rem;color:var(--muted);}
+
+  .game-wrap{display:flex;flex-wrap:wrap;gap:24px;justify-content:center;align-items:flex-start;}
+  .figure-box{position:relative;width:220px;height:440px;flex:0 0 auto;background:linear-gradient(180deg,#fff,#f2ece0);border:1px solid var(--line);border-radius:16px;}
+  .figure-box>svg{position:absolute;inset:0;width:100%;height:100%;}
+  .overlay{opacity:0;transition:opacity .3s;}
+  .overlay.on{opacity:1;}
+  .shake{animation:shake .4s;}
+  @keyframes shake{0%,100%{transform:translateX(0);}25%{transform:translateX(-8px);}75%{transform:translateX(8px);}}
+
+  .options{flex:1 1 340px;min-width:280px;}
+  .opt-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(120px,1fr));gap:12px;margin-top:10px;}
+  .item-btn{background:#fff;border:2px solid var(--line);border-radius:14px;padding:10px;cursor:pointer;font-family:inherit;text-align:center;transition:.15s;}
+  .item-btn:hover{border-color:var(--navy);transform:translateY(-2px);}
+  .item-btn svg{display:block;margin:0 auto 6px;width:52px;height:52px;}
+  .item-btn .lbl{font-size:.85rem;color:var(--navy);font-weight:bold;}
+  .item-btn .lbl-es{font-size:.72rem;color:var(--muted);display:none;}
+  body.show-es .item-btn .lbl-es{display:block;}
+  .item-btn.done{border-color:#3f9d4a;background:#eefbf0;cursor:default;opacity:.75;}
+  .item-btn.done .lbl::after{content:" ✓";color:#3f9d4a;}
+  .item-btn.tried{animation:nope .4s;}
+  @keyframes nope{0%,100%{transform:translateX(0);}25%{transform:translateX(-6px);}75%{transform:translateX(6px);}}
+
+  .hud{font-size:1.05rem;color:var(--navy);font-weight:bold;}
+  #feedback{margin-top:12px;padding:10px 14px;border-radius:10px;min-height:24px;font-size:.98rem;}
+  #feedback.ok{background:#eefbf0;border:1px solid #3f9d4a;color:#256b2d;}
+  #feedback.bad{background:#fdeeea;border:1px solid var(--terracotta);color:#8d2f1c;}
+  #win{display:none;margin-top:14px;padding:14px;border-radius:12px;background:#fff7dc;border:2px solid var(--gold);color:#7a5c00;font-weight:bold;text-align:center;}
+  .btn{font-family:inherit;cursor:pointer;border-radius:999px;padding:9px 20px;font-size:.95rem;background:var(--terracotta);color:#fff;border:none;margin-top:12px;}
+  .btn:hover{background:#93391f;}
+  .hint{color:var(--muted);font-size:.9rem;margin-top:6px;}
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Clothes in Ancient Greece &amp; Rome</h1>
+  <p>3°A · Historia &amp; English · Team: María Paz · Isidora · Javier</p>
+</header>
+
+<nav>
+  <button data-target="home" class="active">Home</button>
+  <button data-target="maria">María Paz</button>
+  <button data-target="isidora">Isidora</button>
+  <button data-target="javier">Javier</button>
+  <button data-target="game">🎮 Dress the Roman</button>
+  <button data-target="sources">📚 Sources</button>
+  <button id="langBtn">Mostrar español</button>
+</nav>
+
+<main>
+
+  <!-- ============ HOME ============ -->
+  <section id="page-home" class="page active">
+    <div class="hero">
+      <div class="big">What did people wear in Ancient Greece and Rome?</div>
+      <div class="sub">Our team project — 3°A</div>
+      <div id="heroArt">
+        <svg viewBox="0 0 320 235" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="80" cy="46" r="20" fill="#f1c9a5"/>
+          <path d="M60,46 a20,20 0 0 1 40,0 v20 h-9 v-17 a11,11 0 0 0 -22,0 v17 h-9 z" fill="#5b3a1e"/>
+          <path d="M61,76 h38 l9,120 h-56 z" fill="#f6efe2" stroke="#cdbfa5" stroke-width="2"/>
+          <path d="M69,86 v104 M80,86 v108 M91,86 v104" stroke="#ddd0b6" stroke-width="2"/>
+          <rect x="59" y="118" width="42" height="7" fill="#c9a227"/>
+          <circle cx="65" cy="82" r="4" fill="#e8c34a" stroke="#a8862a"/>
+          <circle cx="95" cy="82" r="4" fill="#e8c34a" stroke="#a8862a"/>
+          <text x="80" y="224" text-anchor="middle" font-family="Georgia" font-size="14" fill="#1f3a5f">Greece</text>
+          <circle cx="240" cy="46" r="20" fill="#f1c9a5"/>
+          <path d="M220,46 a20,20 0 0 1 40,0 v-3 q-20,-13 -40,0 z" fill="#3a2a1a"/>
+          <path d="M208,94 Q228,78 268,86 L274,196 L204,196 Z" fill="#faf6ec" stroke="#d9cdb2" stroke-width="2"/>
+          <path d="M208,94 L268,86 L264,122 L216,132 Z" fill="#efe6d0"/>
+          <rect x="208" y="152" width="62" height="9" fill="#6b2d8b" opacity=".85"/>
+          <rect x="204" y="96" width="12" height="58" rx="6" fill="#f1c9a5"/>
+          <text x="240" y="224" text-anchor="middle" font-family="Georgia" font-size="14" fill="#1f3a5f">Rome</text>
+        </svg>
+      </div>
+    </div>
+    <div class="card">
+      <p class="en">Hello everyone! We are <b>María Paz</b>, <b>Isidora</b> and <b>Javier</b>. Our topic is the <b>clothes</b> of Ancient Greece and Rome. Today we will show you how the Greeks and the Romans dressed, and we will play a game at the end. Click on our names to see each part.</p>
+      <p class="es">¡Hola a todos! Somos María Paz, Isidora y Javier. Nuestro tema es la vestimenta de la antigua Grecia y Roma. Hoy les mostraremos cómo se vestían los griegos y los romanos, y al final jugaremos un juego. Hagan clic en nuestros nombres para ver cada parte.</p>
+    </div>
+    <div class="names">
+      <button class="namecard" data-target="maria">
+        <svg viewBox="0 0 40 60"><circle cx="20" cy="10" r="7" fill="#f1c9a5"/><path d="M13,10 a7,7 0 0 1 14,0 v8 h-4 v-7 a3,3 0 0 0 -6,0 v7 h-4 z" fill="#5b3a1e"/><path d="M12,20 h16 l4,38 h-24 z" fill="#f6efe2" stroke="#cdbfa5"/><rect x="12" y="34" width="16" height="3" fill="#c9a227"/></svg>
+        <span>María Paz<small>Greece</small></span>
+      </button>
+      <button class="namecard" data-target="isidora">
+        <svg viewBox="0 0 40 60"><circle cx="20" cy="10" r="7" fill="#f1c9a5"/><path d="M13,10 a7,7 0 0 1 14,0 v8 h-4 v-7 a3,3 0 0 0 -6,0 v7 h-4 z" fill="#5b3a1e"/><path d="M12,20 h16 l4,38 h-24 z" fill="#d9a7c7" stroke="#b97fa3"/><rect x="12" y="34" width="16" height="3" fill="#c9a227"/></svg>
+        <span>Isidora<small>Rome</small></span>
+      </button>
+      <button class="namecard" data-target="javier">
+        <svg viewBox="0 0 40 60"><circle cx="20" cy="10" r="7" fill="#f1c9a5"/><path d="M13,10 a7,7 0 0 1 14,0 v8 h-4 v-7 a3,3 0 0 0 -6,0 v7 h-4 z" fill="#5b3a1e"/><path d="M13,19 h14 l6,39 h-26 z" fill="#f6efe2" stroke="#cdbfa5"/><rect x="11" y="34" width="18" height="4" fill="#6b2d8b"/></svg>
+        <span>Javier<small>Compare &amp; Play</small></span>
+      </button>
+    </div>
+  </section>
+
+  <!-- ============ MARÍA PAZ ============ -->
+  <section id="page-maria" class="page">
+    <span class="speaker">Speaker: María Paz</span>
+    <h2>Part 1 — How did the Greeks dress?</h2>
+
+    <div class="card withimg">
+      <div class="txt">
+        <h3>1. Materials and colours</h3>
+        <p class="en">Greek clothes were made at home. They used <b>wool</b> from sheep and <b>linen</b> from a plant called flax. They dyed the fabric with plants and shells to get colours like white, yellow, red and blue. <b>Purple was the most expensive colour.</b></p>
+        <p class="es">La ropa griega se hacía en casa. Usaban lana de oveja y lino de una planta llamada lino. Teñían la tela con plantas y conchas para obtener colores como blanco, amarillo, rojo y azul. El morado era el color más caro.</p>
+      </div>
+      <div class="art wide">
+        <svg viewBox="0 0 200 165" xmlns="http://www.w3.org/2000/svg">
+          <ellipse cx="44" cy="92" rx="32" ry="24" fill="#f4f4f4" stroke="#d9d9d9" stroke-width="2"/>
+          <circle cx="72" cy="70" r="13" fill="#e8e8e8" stroke="#d9d9d9" stroke-width="2"/>
+          <circle cx="78" cy="68" r="2.2" fill="#333"/>
+          <rect x="32" y="112" width="6" height="16" fill="#c9c9c9"/>
+          <rect x="54" y="112" width="6" height="16" fill="#c9c9c9"/>
+          <text x="46" y="146" text-anchor="middle" font-family="Georgia" font-size="11" fill="#6b6357">wool</text>
+          <rect x="104" y="30" width="84" height="22" fill="#f6efe2" stroke="#cdbfa5" stroke-width="2"/>
+          <rect x="104" y="57" width="84" height="22" fill="#c9a227" stroke="#a8862a" stroke-width="2"/>
+          <rect x="104" y="84" width="84" height="22" fill="#b4472e" stroke="#8d2f1c" stroke-width="2"/>
+          <rect x="104" y="111" width="84" height="22" fill="#6b2d8b" stroke="#4a1f61" stroke-width="2"/>
+        </svg>
+      </div>
+    </div>
+
+    <div class="card withimg">
+      <div class="txt">
+        <h3>2. The chiton</h3>
+        <p class="en">The <b>chiton</b> was the most common Greek clothes. It was like a long tunic made of two pieces of cloth. Women wore a long chiton; men wore a shorter one.</p>
+        <p class="es">El chiton era la prenda griega más común. Era como una túnica larga hecha de dos piezas de tela. Las mujeres usaban un chiton largo; los hombres, uno más corto.</p>
+      </div>
+      <div class="art">
+        <svg viewBox="0 0 140 250" xmlns="http://www.w3.org/2000/svg">
+          <rect x="58" y="196" width="12" height="34" fill="#e8b98a"/>
+          <rect x="72" y="196" width="12" height="34" fill="#e8b98a"/>
+          <rect x="54" y="228" width="18" height="10" rx="3" fill="#8a5a33"/>
+          <rect x="70" y="228" width="18" height="10" rx="3" fill="#8a5a33"/>
+          <rect x="40" y="88" width="12" height="66" rx="6" fill="#f1c9a5"/>
+          <rect x="90" y="88" width="12" height="66" rx="6" fill="#f1c9a5"/>
+          <circle cx="71" cy="44" r="20" fill="#f1c9a5"/>
+          <path d="M51,44 a20,20 0 0 1 40,0 v18 h-8 v-16 a12,12 0 0 0 -24,0 v16 h-8 z" fill="#5b3a1e"/>
+          <path d="M52,74 h38 l10,140 h-58 z" fill="#f6efe2" stroke="#cdbfa5" stroke-width="2"/>
+          <path d="M60,84 v120 M71,84 v124 M82,84 v120" stroke="#ddd0b6" stroke-width="2"/>
+          <rect x="50" y="118" width="44" height="8" fill="#c9a227"/>
+          <circle cx="56" cy="80" r="5" fill="#e8c34a" stroke="#a8862a"/>
+          <circle cx="86" cy="80" r="5" fill="#e8c34a" stroke="#a8862a"/>
+        </svg>
+      </div>
+    </div>
+
+    <div class="card withimg">
+      <div class="txt">
+        <h3>3. The peplos</h3>
+        <p class="en">Women also wore the <b>peplos</b>: a big piece of wool folded over the shoulders and held with two brooches. In winter, people wore a cloak: the <b>himation</b> for women and the <b>chlamys</b> for men.</p>
+        <p class="es">Las mujeres también usaban el peplos: una gran pieza de lana doblada sobre los hombros y sujeta con dos broches. En invierno usaban un manto: el himation para las mujeres y la clámide para los hombres.</p>
+      </div>
+      <div class="art">
+        <svg viewBox="0 0 150 250" xmlns="http://www.w3.org/2000/svg">
+          <rect x="58" y="196" width="12" height="34" fill="#e8b98a"/>
+          <rect x="72" y="196" width="12" height="34" fill="#e8b98a"/>
+          <circle cx="71" cy="44" r="20" fill="#f1c9a5"/>
+          <path d="M51,44 a20,20 0 0 1 40,0 v18 h-8 v-16 a12,12 0 0 0 -24,0 v16 h-8 z" fill="#5b3a1e"/>
+          <path d="M52,74 h46 l8,140 h-62 z" fill="#efe6d0" stroke="#cdbfa5" stroke-width="2"/>
+          <path d="M48,74 h54 v42 h-54 z" fill="#e2d3b0" stroke="#cdbfa5" stroke-width="2"/>
+          <circle cx="56" cy="80" r="5" fill="#e8c34a" stroke="#a8862a"/>
+          <circle cx="94" cy="80" r="5" fill="#e8c34a" stroke="#a8862a"/>
+          <path d="M44,80 q-16,60 4,112 h22 q-18,-52 -6,-106 z" fill="#d9e3f0" stroke="#a9bcd6" stroke-width="2"/>
+          <text x="112" y="232" font-family="Georgia" font-size="10" fill="#6b6357">himation</text>
+        </svg>
+      </div>
+    </div>
+
+    <div class="card withimg">
+      <div class="txt">
+        <h3>4. Getting dressed</h3>
+        <p class="en">They did not use buttons or zips. They used brooches called <b>fibulae</b>, and a belt to tie the tunic. They wore leather sandals, and women had long hair with ribbons and gold jewellery.</p>
+        <p class="es">No usaban botones ni cierres. Usaban broches llamados fíbulas y un cinturón para sujetar la túnica. Usaban sandalias de cuero, y las mujeres llevaban el pelo largo con cintas y joyas de oro.</p>
+      </div>
+      <div class="art wide">
+        <svg viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="42" cy="42" r="26" fill="#e8c34a" stroke="#a8862a" stroke-width="3"/>
+          <circle cx="42" cy="42" r="9" fill="#a8862a"/>
+          <text x="42" y="92" text-anchor="middle" font-family="Georgia" font-size="11" fill="#6b6357">fibula</text>
+          <path d="M112,34 h62 v20 q0,10 -31,10 q-31,0 -31,-10 z" fill="#8a5a33" stroke="#5f3c1f" stroke-width="2"/>
+          <path d="M112,46 h62 M120,36 L126,54 M166,36 L160,54" stroke="#5f3c1f" stroke-width="2"/>
+          <text x="143" y="92" text-anchor="middle" font-family="Georgia" font-size="11" fill="#6b6357">sandals</text>
+          <path d="M120,104 q28,26 56,0" fill="none" stroke="#e8c34a" stroke-width="3"/>
+          <circle cx="148" cy="124" r="5" fill="#e8c34a"/>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ ISIDORA ============ -->
+  <section id="page-isidora" class="page">
+    <span class="speaker">Speaker: Isidora</span>
+    <h2>Part 2 — How did the Romans dress?</h2>
+
+    <div class="card withimg">
+      <div class="txt">
+        <h3>1. The tunica</h3>
+        <p class="en">The basic Roman clothes was the <b>tunica</b>, like a big T-shirt. Everybody wore it: men, women, children and slaves. Poor people wore a short tunica; rich people wore a long one.</p>
+        <p class="es">La prenda básica romana era la túnica, como una camiseta grande. Todos la usaban: hombres, mujeres, niños y esclavos. La gente pobre usaba una túnica corta; la gente rica, una larga.</p>
+      </div>
+      <div class="art">
+        <svg viewBox="0 0 140 250" xmlns="http://www.w3.org/2000/svg">
+          <rect x="58" y="186" width="12" height="44" fill="#e8b98a"/>
+          <rect x="72" y="186" width="12" height="44" fill="#e8b98a"/>
+          <rect x="54" y="226" width="18" height="10" rx="3" fill="#8a5a33"/>
+          <rect x="70" y="226" width="18" height="10" rx="3" fill="#8a5a33"/>
+          <circle cx="71" cy="44" r="20" fill="#f1c9a5"/>
+          <path d="M51,44 a20,20 0 0 1 40,0 v-3 q-20,-13 -40,0 z" fill="#3a2a1a"/>
+          <rect x="38" y="86" width="12" height="58" rx="6" fill="#f1c9a5"/>
+          <rect x="92" y="86" width="12" height="58" rx="6" fill="#f1c9a5"/>
+          <path d="M38,88 h14 v26 h-14 z" fill="#f6efe2" stroke="#cdbfa5" stroke-width="2"/>
+          <path d="M90,88 h14 v26 h-14 z" fill="#f6efe2" stroke="#cdbfa5" stroke-width="2"/>
+          <rect x="50" y="76" width="42" height="58" fill="#f6efe2" stroke="#cdbfa5" stroke-width="2"/>
+          <path d="M50,134 h42 l6,52 h-54 z" fill="#f6efe2" stroke="#cdbfa5" stroke-width="2"/>
+          <rect x="48" y="112" width="46" height="8" fill="#b4472e"/>
+        </svg>
+      </div>
+    </div>
+
+    <div class="card withimg">
+      <div class="txt">
+        <h3>2. The toga</h3>
+        <p class="en">Only Roman <b>citizens</b> could wear the <b>toga</b>. It was a big piece of wool, about 6 metres long, worn over the tunica. It was very heavy and difficult to put on. The colour had a meaning: the <b>toga virilis</b> was for adult men, the <b>toga praetexta</b> (with a purple stripe) was for boys and important people, and the <b>toga pulla</b> (dark) was for funerals.</p>
+        <p class="es">Solo los ciudadanos romanos podían usar la toga. Era una gran pieza de lana, de unos 6 metros, que se ponía sobre la túnica. Era muy pesada y difícil de poner. El color tenía un significado: la toga virilis era para hombres adultos, la toga praetexta (con franja morada) era para niños y personas importantes, y la toga pulla (oscura) era para funerales.</p>
+      </div>
+      <div class="art">
+        <svg viewBox="0 0 150 250" xmlns="http://www.w3.org/2000/svg">
+          <rect x="60" y="196" width="13" height="34" fill="#e8b98a"/>
+          <rect x="77" y="196" width="13" height="34" fill="#e8b98a"/>
+          <circle cx="75" cy="44" r="20" fill="#f1c9a5"/>
+          <path d="M55,44 a20,20 0 0 1 40,0 v-3 q-20,-13 -40,0 z" fill="#3a2a1a"/>
+          <rect x="40" y="96" width="12" height="60" rx="6" fill="#f1c9a5"/>
+          <rect x="98" y="92" width="12" height="54" rx="6" fill="#f1c9a5"/>
+          <path d="M42,92 Q64,74 100,82 L108,196 L38,196 Z" fill="#faf6ec" stroke="#d9cdb2" stroke-width="2"/>
+          <path d="M42,92 L100,82 L96,122 L54,132 Z" fill="#efe6d0"/>
+          <rect x="42" y="150" width="66" height="10" fill="#6b2d8b" opacity=".85"/>
+        </svg>
+      </div>
+    </div>
+
+    <div class="card withimg">
+      <div class="txt">
+        <h3>3. Roman women</h3>
+        <p class="en">Roman women wore a long tunica and, over it, the <b>stola</b>. Outside the house, they wore the <b>palla</b>, a big shawl. Women's clothes showed if they were married.</p>
+        <p class="es">Las mujeres romanas usaban una túnica larga y, encima, la stola. Fuera de casa usaban la palla, un gran chal. La ropa de las mujeres mostraba si estaban casadas.</p>
+      </div>
+      <div class="art">
+        <svg viewBox="0 0 150 250" xmlns="http://www.w3.org/2000/svg">
+          <rect x="58" y="198" width="12" height="32" fill="#e8b98a"/>
+          <rect x="72" y="198" width="12" height="32" fill="#e8b98a"/>
+          <circle cx="71" cy="44" r="20" fill="#f1c9a5"/>
+          <path d="M51,44 a20,20 0 0 1 40,0 v18 h-8 v-16 a12,12 0 0 0 -24,0 v16 h-8 z" fill="#5b3a1e"/>
+          <path d="M50,74 h42 l10,146 h-62 z" fill="#d9a7c7" stroke="#b97fa3" stroke-width="2"/>
+          <path d="M58,86 v126 M71,86 v130 M84,86 v126" stroke="#c98fb5" stroke-width="2"/>
+          <rect x="50" y="120" width="42" height="7" fill="#c9a227"/>
+          <path d="M44,92 Q71,120 98,92 L100,126 Q71,150 42,126 Z" fill="#d9e3f0" stroke="#a9bcd6" stroke-width="2"/>
+          <text x="104" y="152" font-family="Georgia" font-size="10" fill="#6b6357">palla</text>
+        </svg>
+      </div>
+    </div>
+
+    <div class="card withimg">
+      <div class="txt">
+        <h3>4. Shoes and accessories</h3>
+        <p class="en">Romans wore <b>calcei</b> (leather shoes) outside and <b>soleae</b> (sandals) at home. They loved jewellery: rings, bracelets and brooches.</p>
+        <p class="es">Los romanos usaban calcei (zapatos de cuero) en la calle y soleae (sandalias) en casa. Les encantaban las joyas: anillos, pulseras y broches.</p>
+      </div>
+      <div class="art wide">
+        <svg viewBox="0 0 200 120" xmlns="http://www.w3.org/2000/svg">
+          <path d="M22,34 h52 v22 q0,10 -26,10 q-26,0 -26,-10 z" fill="#8a5a33" stroke="#5f3c1f" stroke-width="2"/>
+          <path d="M32,40 L36,58 M48,40 L48,60 M64,40 L60,58" stroke="#5f3c1f" stroke-width="2"/>
+          <text x="48" y="88" text-anchor="middle" font-family="Georgia" font-size="11" fill="#6b6357">calcei</text>
+          <path d="M120,40 h58 v14 q0,8 -29,8 q-29,0 -29,-8 z" fill="#c98f4a" stroke="#8a5a33" stroke-width="2"/>
+          <path d="M128,40 L152,56 M170,40 L154,56 M149,40 L149,56" stroke="#8a5a33" stroke-width="2"/>
+          <text x="149" y="88" text-anchor="middle" font-family="Georgia" font-size="11" fill="#6b6357">soleae</text>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ JAVIER ============ -->
+  <section id="page-javier" class="page">
+    <span class="speaker">Speaker: Javier</span>
+    <h2>Part 3 — Same or different? + Game</h2>
+
+    <div class="card withimg">
+      <div class="txt">
+        <h3>1. Greece vs. Rome</h3>
+        <table>
+          <tr><th> </th><th>Greece</th><th>Rome</th></tr>
+          <tr><td>Everyday clothes</td><td>Chiton, peplos</td><td>Tunica</td></tr>
+          <tr><td>Women</td><td>Peplos + himation</td><td>Stola + palla</td></tr>
+          <tr><td>Only citizens</td><td>—</td><td>Toga</td></tr>
+          <tr><td>Colour meaning</td><td>Dyed with plants</td><td>Purple = power</td></tr>
+          <tr><td>Shoes</td><td>Sandals</td><td>Calcei &amp; soleae</td></tr>
+        </table>
+      </div>
+      <div class="art">
+        <svg viewBox="0 0 150 220" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="40" cy="34" r="15" fill="#f1c9a5"/>
+          <path d="M25,34 a15,15 0 0 1 30,0 v13 h-6 v-12 a9,9 0 0 0 -18,0 v12 h-6 z" fill="#5b3a1e"/>
+          <path d="M26,54 h28 l7,110 h-42 z" fill="#f6efe2" stroke="#cdbfa5" stroke-width="2"/>
+          <rect x="25" y="86" width="30" height="6" fill="#c9a227"/>
+          <text x="40" y="184" text-anchor="middle" font-family="Georgia" font-size="11" fill="#1f3a5f">Greece</text>
+          <circle cx="110" cy="34" r="15" fill="#f1c9a5"/>
+          <path d="M95,34 a15,15 0 0 1 30,0 v-2 q-15,-10 -30,0 z" fill="#3a2a1a"/>
+          <path d="M92,62 Q110,50 132,58 L137,164 L88,164 Z" fill="#faf6ec" stroke="#d9cdb2" stroke-width="2"/>
+          <rect x="92" y="124" width="45" height="7" fill="#6b2d8b"/>
+          <text x="112" y="184" text-anchor="middle" font-family="Georgia" font-size="11" fill="#1f3a5f">Rome</text>
+          <path d="M70,104 l8,-5 l8,5 l-8,5 z" fill="#c9a227"/>
+        </svg>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>2. What clothes said about you</h3>
+      <p class="en">In Greece and Rome, clothes told people who you were: rich or poor, citizen or slave, adult or child. Clothes were like a uniform of your life.</p>
+      <p class="es">En Grecia y Roma, la ropa decía quién eras: rico o pobre, ciudadano o esclavo, adulto o niño. La ropa era como un uniforme de tu vida.</p>
+    </div>
+
+    <div class="card">
+      <h3>3. Fun facts</h3>
+      <ol class="facts">
+        <li>
+          <svg viewBox="0 0 60 60"><circle cx="30" cy="36" r="17" fill="#6b2d8b"/><path d="M30,19 q-10,-10 -14,-3 q6,2 8,6" fill="none" stroke="#6b2d8b" stroke-width="3"/><circle cx="23" cy="30" r="2" fill="#fff"/><circle cx="37" cy="30" r="2" fill="#fff"/></svg>
+          <div><span class="en">Purple dye came from sea snails and was so expensive that only emperors used it.</span><span class="es">El tinte morado venía de caracoles de mar y era tan caro que solo los emperadores lo usaban.</span></div>
+        </li>
+        <li>
+          <svg viewBox="0 0 60 60"><path d="M16,40 a14,14 0 0 1 28,0 v6 h-28 z" fill="#9aa3ad" stroke="#5b636b" stroke-width="2"/><rect x="34" y="28" width="4" height="12" fill="#5b636b"/><circle cx="34" cy="24" r="3" fill="#9aa3ad"/><text x="30" y="58" text-anchor="middle" font-family="Georgia" font-size="12" fill="#5b636b">5kg</text></svg>
+          <div><span class="en">A toga could weigh more than 5 kilos!</span><span class="es">¡Una toga podía pesar más de 5 kilos!</span></div>
+        </li>
+        <li>
+          <svg viewBox="0 0 60 60"><circle cx="34" cy="14" r="7" fill="#f1c9a5"/><path d="M28,22 h12 l4,10 h-8 l-2,10 h-8 l-2,10 h-8 z" fill="#f1c9a5" stroke="#d9a882" stroke-width="1.5"/></svg>
+          <div><span class="en">Greek athletes competed with no clothes at all.</span><span class="es">Los atletas griegos competían sin ropa.</span></div>
+        </li>
+        <li>
+          <svg viewBox="0 0 60 60"><path d="M14,28 h32 v18 h-32 z" fill="#c9d6e2" stroke="#8ea6c9" stroke-width="2"/><ellipse cx="30" cy="28" rx="16" ry="6" fill="#dbe6f0" stroke="#8ea6c9" stroke-width="2"/><circle cx="22" cy="22" r="3" fill="#fff" opacity=".8"/><circle cx="38" cy="20" r="2.4" fill="#fff" opacity=".8"/></svg>
+          <div><span class="en">Romans used a special liquid to clean their clothes (yes, really!).</span><span class="es">Los romanos usaban un líquido especial para limpiar la ropa (sí, en serio).</span></div>
+        </li>
+      </ol>
+    </div>
+
+    <div class="card">
+      <h3>4. Let's play!</h3>
+      <p class="en">Now it's your turn. Help us dress the Roman: click only the clothes that are really Roman.</p>
+      <p class="es">Ahora es su turno. Ayúdennos a vestir al romano: hagan clic solo en las prendas que son realmente romanas.</p>
+      <button class="btn" data-target="game">Go to the game →</button>
+    </div>
+
+    <div class="card">
+      <h3>5. Thank you!</h3>
+      <p class="en">Thank you very much for listening! Do you have any questions?</p>
+      <p class="es">¡Muchas gracias por escucharnos! ¿Tienen alguna pregunta?</p>
+    </div>
+  </section>
+
+  <!-- ============ GAME ============ -->
+  <section id="page-game" class="page">
+    <h2>🎮 Dress the Roman</h2>
+    <p class="en">Click the clothes that a real Roman would wear. Find all 5 Roman items!</p>
+    <p class="es">Haz clic en las prendas que usaría un romano de verdad. ¡Encuentra las 5 prendas romanas!</p>
+
+    <div class="game-wrap">
+      <div class="figure-box" id="figureBox">
+        <svg viewBox="0 0 200 420" xmlns="http://www.w3.org/2000/svg">
+          <g fill="#f1c9a5" stroke="#c08b5c" stroke-width="2">
+            <circle cx="100" cy="58" r="30"/>
+            <rect x="91" y="84" width="18" height="14"/>
+            <rect x="66" y="94" width="68" height="130" rx="12"/>
+            <rect x="44" y="98" width="18" height="120" rx="9"/>
+            <rect x="138" y="98" width="18" height="120" rx="9"/>
+            <circle cx="53" cy="224" r="11"/>
+            <circle cx="147" cy="224" r="11"/>
+            <rect x="74" y="222" width="22" height="150" rx="10"/>
+            <rect x="104" y="222" width="22" height="150" rx="10"/>
+            <ellipse cx="85" cy="380" rx="18" ry="9"/>
+            <ellipse cx="115" cy="380" rx="18" ry="9"/>
+          </g>
+        </svg>
+
+        <svg class="overlay" id="ov-tunica" viewBox="0 0 200 420">
+          <rect x="56" y="90" width="88" height="152" rx="10" fill="#f6efe2" stroke="#cdbfa5" stroke-width="2"/>
+          <rect x="40" y="94" width="24" height="56" rx="10" fill="#f6efe2" stroke="#cdbfa5" stroke-width="2"/>
+          <rect x="136" y="94" width="24" height="56" rx="10" fill="#f6efe2" stroke="#cdbfa5" stroke-width="2"/>
+          <path d="M84,90 q16,18 32,0" fill="none" stroke="#cdbfa5" stroke-width="2"/>
+          <rect x="55" y="128" width="90" height="9" fill="#b4472e"/>
+        </svg>
+
+        <svg class="overlay" id="ov-toga" viewBox="0 0 200 420">
+          <path d="M62,92 h76 v160 h-76 z" fill="#faf6ec" stroke="#d9cdb2" stroke-width="2"/>
+          <path d="M62,92 L138,154 L138,186 L62,124 Z" fill="#efe6d0"/>
+          <rect x="62" y="154" width="76" height="14" fill="#6b2d8b" opacity=".85"/>
+        </svg>
+
+        <svg class="overlay" id="ov-palla" viewBox="0 0 200 420">
+          <path d="M54,108 Q100,156 146,108 L146,176 Q100,214 54,176 Z" fill="#d9e3f0" stroke="#a9bcd6" stroke-width="2"/>
+        </svg>
+
+        <svg class="overlay" id="ov-calcei" viewBox="0 0 200 420">
+          <g fill="#8a5a33" stroke="#5f3c1f" stroke-width="2">
+            <path d="M67,366 h36 v14 q0,10 -18,10 q-18,0 -18,-10 z"/>
+            <path d="M97,366 h36 v14 q0,10 -18,10 q-18,0 -18,-10 z"/>
+          </g>
+        </svg>
+
+        <svg class="overlay" id="ov-fibula" viewBox="0 0 200 420">
+          <circle cx="72" cy="112" r="10" fill="#e8c34a" stroke="#a8862a" stroke-width="2"/>
+          <circle cx="72" cy="112" r="3.5" fill="#a8862a"/>
+        </svg>
+
+        <svg class="overlay" id="ov-bones" viewBox="0 0 200 420">
+          <g fill="#f2f2f2" stroke="#c9c9c9" stroke-width="2">
+            <rect x="74" y="118" width="52" height="12" rx="6"/>
+            <circle cx="74" cy="124" r="10"/><circle cx="126" cy="124" r="10"/>
+            <rect x="74" y="168" width="52" height="12" rx="6"/>
+            <circle cx="74" cy="174" r="10"/><circle cx="126" cy="174" r="10"/>
+            <rect x="88" y="36" width="24" height="10" rx="5"/>
+            <circle cx="88" cy="41" r="8"/><circle cx="112" cy="41" r="8"/>
+          </g>
+        </svg>
+
+        <svg class="overlay" id="ov-nemes" viewBox="0 0 200 420">
+          <path d="M70,40 q30,-20 60,0 l8,54 q-38,10 -76,0 z" fill="#2f5fbf" stroke="#e8c34a" stroke-width="3"/>
+          <path d="M84,44 l0,44 M100,40 l0,50 M116,44 l0,44" stroke="#e8c34a" stroke-width="3"/>
+        </svg>
+
+        <svg class="overlay" id="ov-helmet" viewBox="0 0 200 420">
+          <path d="M70,42 a30,30 0 0 1 60,0 v30 h-60 z" fill="#9aa3ad" stroke="#5b636b" stroke-width="2"/>
+          <rect x="96" y="8" width="8" height="26" fill="#b4472e"/>
+          <rect x="66" y="66" width="68" height="8" fill="#5b636b"/>
+        </svg>
+
+        <svg class="overlay" id="ov-hat" viewBox="0 0 200 420">
+          <ellipse cx="100" cy="34" rx="46" ry="10" fill="#8a5a33" stroke="#5f3c1f" stroke-width="2"/>
+          <path d="M78,34 q22,-42 44,0 z" fill="#a06b3d" stroke="#5f3c1f" stroke-width="2"/>
+        </svg>
+      </div>
+
+      <div class="options">
+        <div class="hud">Roman items found: <span id="score">0</span> / 5</div>
+        <div class="opt-grid" id="optGrid">
+
+          <button class="item-btn" data-key="tunica" data-correct="true">
+            <svg viewBox="0 0 60 60"><rect x="16" y="8" width="28" height="44" rx="5" fill="#f6efe2" stroke="#a89468" stroke-width="2"/><rect x="6" y="10" width="10" height="18" rx="4" fill="#f6efe2" stroke="#a89468" stroke-width="2"/><rect x="44" y="10" width="10" height="18" rx="4" fill="#f6efe2" stroke="#a89468" stroke-width="2"/></svg>
+            <span class="lbl">Tunica</span><span class="lbl-es">Túnica</span>
+          </button>
+
+          <button class="item-btn" data-key="toga" data-correct="true">
+            <svg viewBox="0 0 60 60"><path d="M14,6 h32 v48 h-32 z" fill="#faf6ec" stroke="#c8b98f" stroke-width="2"/><path d="M14,6 L46,26 L46,38 L14,18 Z" fill="#eee4cc"/><rect x="14" y="26" width="32" height="5" fill="#6b2d8b"/></svg>
+            <span class="lbl">Toga</span><span class="lbl-es">Toga</span>
+          </button>
+
+          <button class="item-btn" data-key="palla" data-correct="true">
+            <svg viewBox="0 0 60 60"><path d="M10,14 Q30,34 50,14 L50,36 Q30,52 10,36 Z" fill="#d9e3f0" stroke="#8ea6c9" stroke-width="2"/></svg>
+            <span class="lbl">Palla</span><span class="lbl-es">Palla (chal)</span>
+          </button>
+
+          <button class="item-btn" data-key="calcei" data-correct="true">
+            <svg viewBox="0 0 60 60"><g fill="#8a5a33" stroke="#5f3c1f" stroke-width="2"><path d="M10,26 h20 v8 q0,8 -10,8 q-10,0 -10,-8 z"/><path d="M30,26 h20 v8 q0,8 -10,8 q-10,0 -10,-8 z"/></g></svg>
+            <span class="lbl">Calcei</span><span class="lbl-es">Calcei (zapatos)</span>
+          </button>
+
+          <button class="item-btn" data-key="fibula" data-correct="true">
+            <svg viewBox="0 0 60 60"><circle cx="30" cy="30" r="16" fill="#e8c34a" stroke="#a8862a" stroke-width="2"/><circle cx="30" cy="30" r="6" fill="#a8862a"/></svg>
+            <span class="lbl">Fibula</span><span class="lbl-es">Fíbula (broche)</span>
+          </button>
+
+          <button class="item-btn" data-key="bones" data-correct="false">
+            <svg viewBox="0 0 60 60"><g fill="#f2f2f2" stroke="#b9b9b9" stroke-width="2"><rect x="14" y="20" width="32" height="8" rx="4"/><circle cx="14" cy="24" r="7"/><circle cx="46" cy="24" r="7"/><rect x="22" y="36" width="18" height="8" rx="4"/><circle cx="22" cy="40" r="6"/><circle cx="40" cy="40" r="6"/></g></svg>
+            <span class="lbl">Bones</span><span class="lbl-es">Huesos</span>
+          </button>
+
+          <button class="item-btn" data-key="nemes" data-correct="false">
+            <svg viewBox="0 0 60 60"><path d="M18,14 q12,-10 24,0 l4,30 q-16,6 -32,0 z" fill="#2f5fbf" stroke="#e8c34a" stroke-width="2"/><path d="M24,16 v26 M30,13 v30 M36,16 v26" stroke="#e8c34a" stroke-width="2"/></svg>
+            <span class="lbl">Nemes</span><span class="lbl-es">Nemes (egipcio)</span>
+          </button>
+
+          <button class="item-btn" data-key="helmet" data-correct="false">
+            <svg viewBox="0 0 60 60"><path d="M16,26 a14,14 0 0 1 28,0 v14 h-28 z" fill="#9aa3ad" stroke="#5b636b" stroke-width="2"/><rect x="28" y="4" width="4" height="14" fill="#b4472e"/><rect x="14" y="38" width="32" height="5" fill="#5b636b"/></svg>
+            <span class="lbl">Helmet</span><span class="lbl-es">Casco medieval</span>
+          </button>
+
+          <button class="item-btn" data-key="hat" data-correct="false">
+            <svg viewBox="0 0 60 60"><ellipse cx="30" cy="34" rx="24" ry="6" fill="#8a5a33" stroke="#5f3c1f" stroke-width="2"/><path d="M18,34 q12,-24 24,0 z" fill="#a06b3d" stroke="#5f3c1f" stroke-width="2"/></svg>
+            <span class="lbl">Cowboy hat</span><span class="lbl-es">Sombrero vaquero</span>
+          </button>
+
+        </div>
+        <div id="feedback"></div>
+        <div id="win">🎉 Optime! You dressed a real Roman!<br><span style="font-weight:normal;font-size:.9rem">¡Excelente! ¡Vestiste a un romano de verdad!</span></div>
+        <button class="btn" id="resetBtn">Play again / Jugar otra vez</button>
+        <p class="hint">Tip: if the item shakes, it is not Roman. Try another one!</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SOURCES ============ -->
+  <section id="page-sources" class="page">
+    <h2>📚 Sources / Fuentes</h2>
+    <p class="en">We used these websites for our information. All of them are free and safe.</p>
+    <p class="es">Usamos estos sitios web para nuestra información. Todos son gratuitos y seguros.</p>
+
+    <div class="src">
+      <a href="https://en.wikipedia.org/wiki/Clothing_in_ancient_Greece" target="_blank" rel="noopener">Wikipedia — Clothing in ancient Greece</a>
+      <span class="why">Clothes, materials and colours in Greece. / Prendas, materiales y colores en Grecia.</span>
+    </div>
+    <div class="src">
+      <a href="https://en.wikipedia.org/wiki/Chiton_(garment)" target="_blank" rel="noopener">Wikipedia — Chiton</a>
+      <span class="why">The chiton tunic. / La túnica chiton.</span>
+    </div>
+    <div class="src">
+      <a href="https://en.wikipedia.org/wiki/Peplos" target="_blank" rel="noopener">Wikipedia — Peplos</a>
+      <span class="why">The peplos and its brooches. / El peplos y sus broches.</span>
+    </div>
+    <div class="src">
+      <a href="https://en.wikipedia.org/wiki/Himation" target="_blank" rel="noopener">Wikipedia — Himation</a>
+      <span class="why">The Greek cloak. / El manto griego.</span>
+    </div>
+    <div class="src">
+      <a href="https://en.wikipedia.org/wiki/Clothing_in_ancient_Rome" target="_blank" rel="noopener">Wikipedia — Clothing in ancient Rome</a>
+      <span class="why">Roman clothes, tunica and toga. / Prendas romanas, túnica y toga.</span>
+    </div>
+    <div class="src">
+      <a href="https://en.wikipedia.org/wiki/Toga" target="_blank" rel="noopener">Wikipedia — Toga</a>
+      <span class="why">Types and colours of the toga. / Tipos y colores de la toga.</span>
+    </div>
+    <div class="src">
+      <a href="https://en.wikipedia.org/wiki/Stola" target="_blank" rel="noopener">Wikipedia — Stola</a>
+      <span class="why">Clothes of Roman women. / La ropa de las mujeres romanas.</span>
+    </div>
+    <div class="src">
+      <a href="https://en.wikipedia.org/wiki/Palla_(garment)" target="_blank" rel="noopener">Wikipedia — Palla</a>
+      <span class="why">The Roman women's shawl. / El chal de las mujeres romanas.</span>
+    </div>
+    <div class="src">
+      <a href="https://www.britannica.com/topic/toga" target="_blank" rel="noopener">Encyclopaedia Britannica — Toga</a>
+      <span class="why">General information about the toga. / Información general sobre la toga.</span>
+    </div>
+    <div class="src">
+      <a href="https://www.worldhistory.org/Greek_Clothing/" target="_blank" rel="noopener">World History Encyclopedia — Greek Clothing</a>
+      <span class="why">Extra facts about Greek clothes. / Datos extra sobre la ropa griega.</span>
+    </div>
+    <div class="src">
+      <a href="https://www.worldhistory.org/Roman_Clothing/" target="_blank" rel="noopener">World History Encyclopedia — Roman Clothing</a>
+      <span class="why">Extra facts about Roman clothes. / Datos extra sobre la ropa romana.</span>
+    </div>
+
+    <p class="note">Note: the drawings on this page are simple 2D illustrations made for school, not real photos.<br>
+    Nota: los dibujos de esta página son ilustraciones simples en 2D hechas para el colegio, no son fotos reales.</p>
+  </section>
+
+</main>
+
+<script>
+  // Navigation
+  function show(id){
+    document.querySelectorAll('.page').forEach(p=>p.classList.toggle('active', p.id === 'page-'+id));
+    document.querySelectorAll('nav button[data-target]').forEach(b=>b.classList.toggle('active', b.dataset.target === id));
+    window.scrollTo({top:0, behavior:'smooth'});
+  }
+  document.querySelectorAll('[data-target]').forEach(el=>{
+    el.addEventListener('click', ()=> show(el.dataset.target));
+  });
+
+  // Language toggle
+  const langBtn = document.getElementById('langBtn');
+  langBtn.addEventListener('click', ()=>{
+    document.body.classList.toggle('show-es');
+    langBtn.textContent = document.body.classList.contains('show-es') ? 'Ocultar español' : 'Mostrar español';
+  });
+
+  // Game
+  const facts = {
+    tunica:{ok:"Tunica — the basic Roman clothes. Everyone wore it.", es:"Túnica: la prenda básica romana. Todos la usaban."},
+    toga:{ok:"Toga — only Roman citizens could wear it. Heavy wool!", es:"Toga: solo los ciudadanos romanos podían usarla. ¡Lana pesada!"},
+    palla:{ok:"Palla — the shawl Roman women wore outside.", es:"Palla: el chal que las mujeres romanas usaban fuera de casa."},
+    calcei:{ok:"Calcei — leather shoes to go outside.", es:"Calcei: zapatos de cuero para salir a la calle."},
+    fibula:{ok:"Fibula — a brooch to hold the clothes, like a pin.", es:"Fíbula: un broche para sujetar la ropa, como un alfiler."}
+  };
+  const wrongMsg = {
+    bones:{ok:"Bones? That is a caveman, not a Roman!", es:"¿Huesos? ¡Eso es un cavernícola, no un romano!"},
+    nemes:{ok:"The nemes is Egyptian, from the pharaohs!", es:"El nemes es egipcio, ¡de los faraones!"},
+    helmet:{ok:"A knight's helmet is from the Middle Ages!", es:"¡El casco de caballero es de la Edad Media!"},
+    hat:{ok:"A cowboy hat is from America, centuries later!", es:"¡El sombrero vaquero es de América, siglos después!"}
+  };
+
+  const TOTAL = 5;
+  let score = 0;
+  const found = new Set();
+  const figureBox = document.getElementById('figureBox');
+  const feedback = document.getElementById('feedback');
+  const scoreEl = document.getElementById('score');
+  const winEl = document.getElementById('win');
+
+  function setFeedback(kind, key){
+    const data = (kind === 'ok' ? facts : wrongMsg)[key];
+    feedback.className = kind;
+    feedback.innerHTML = data.ok + '<br><span style="font-style:italic;color:#6b6357">' + data.es + '</span>';
+  }
+
+  document.querySelectorAll('.item-btn').forEach(btn=>{
+    btn.addEventListener('click', ()=>{
+      const key = btn.dataset.key;
+      const isCorrect = btn.dataset.correct === 'true';
+      if(isCorrect){
+        if(found.has(key)) return;
+        found.add(key);
+        score++;
+        scoreEl.textContent = score;
+        document.getElementById('ov-'+key).classList.add('on');
+        btn.classList.add('done');
+        setFeedback('ok', key);
+        if(score === TOTAL){
+          winEl.style.display = 'block';
+          feedback.className = ''; feedback.innerHTML = '';
+        }
+      } else {
+        btn.classList.add('tried');
+        setTimeout(()=>btn.classList.remove('tried'), 420);
+        setFeedback('bad', key);
+      }
+    });
+  });
+
+  document.getElementById('resetBtn').addEventListener('click', ()=>{
+    score = 0; found.clear();
+    scoreEl.textContent = '0';
+    winEl.style.display = 'none';
+    feedback.className = ''; feedback.innerHTML = '';
+    document.querySelectorAll('.overlay').forEach(o=>o.classList.remove('on'));
+    document.querySelectorAll('.item-btn').forEach(b=>b.classList.remove('done'));
+  });
+</script>
+
+</body>
+</html>

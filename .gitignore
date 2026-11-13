@@ -1,0 +1,6 @@
+# Memoria local del agente (no se sube)
+.openhands/
+
+# Basura del sistema
+.DS_Store
+Thumbs.db
