@@ -110,6 +110,36 @@
   .btn{font-family:inherit;cursor:pointer;border-radius:999px;padding:9px 20px;font-size:.95rem;background:var(--terracotta);color:#fff;border:none;margin-top:12px;}
   .btn:hover{background:#93391f;}
   .hint{color:var(--muted);font-size:.9rem;margin-top:6px;}
+
+  /* ---- Speech section ---- */
+  .topic-box{display:flex;flex-wrap:wrap;gap:16px;justify-content:space-between;align-items:center;background:#fff7dc;border:2px solid var(--gold);border-radius:14px;padding:14px 18px;margin:6px 0 16px;}
+  .topic-box .field{font-size:1.05rem;color:var(--navy);}
+  .topic-box .field b{color:var(--terracotta);}
+  .civ-toggle{display:inline-flex;gap:8px;margin-left:8px;vertical-align:middle;}
+  .civ-toggle button{font-family:inherit;cursor:pointer;border:2px solid var(--navy);background:#fff;color:var(--navy);border-radius:999px;padding:5px 14px;font-size:.88rem;transition:.15s;}
+  .civ-toggle button:hover{background:var(--navy);color:#fff;}
+  .civ-toggle button.active{background:var(--navy);color:#fff;}
+  .legend{display:flex;gap:18px;flex-wrap:wrap;font-size:.9rem;margin:10px 0;color:var(--muted);}
+  .legend span{display:flex;align-items:center;gap:6px;}
+  .legend i{width:14px;height:14px;border-radius:4px;display:inline-block;}
+  .speech-line{border-left:5px solid var(--line);padding:10px 0 10px 16px;margin:16px 0;}
+  .speech-line .who{font-weight:bold;color:var(--terracotta);font-size:.9rem;letter-spacing:.5px;}
+  .speech-line .gram{font-size:.75rem;color:var(--muted);text-transform:uppercase;letter-spacing:.5px;margin-left:8px;}
+  .speech-line p{margin:6px 0 0;font-size:1.12rem;}
+  .s-maria{border-color:#b4472e;}
+  .s-isidora{border-color:#c9a227;}
+  .s-javier{border-color:#1f3a5f;}
+  .s-all{border-color:#3f9d4a;}
+  .n{color:#1f6fbf;}
+  .adj{color:#2f8f4e;}
+  .v{color:#c1571f;}
+  .civ-rome{display:none;}
+  body.civ-rome-on .civ-greece{display:none;}
+  body.civ-rome-on .civ-rome{display:inline;}
+  .vocab{font-size:.92rem;}
+  .vocab td{vertical-align:top;line-height:1.9;}
+  .used{background:#fff2b8;border-radius:4px;padding:1px 6px;font-weight:bold;color:#7a5c00;}
+  .speech-note{font-size:.9rem;color:var(--muted);}
 </style>
 </head>
 <body>
@@ -125,6 +155,7 @@
   <button data-target="isidora">Isidora</button>
   <button data-target="javier">Javier</button>
   <button data-target="game">🎮 Dress the Roman</button>
+  <button data-target="speech">🗣️ Speech</button>
   <button data-target="sources">📚 Sources</button>
   <button id="langBtn">Mostrar español</button>
 </nav>
@@ -578,6 +609,91 @@
     </div>
   </section>
 
+  <!-- ============ SPEECH ============ -->
+  <section id="page-speech" class="page">
+    <h2>🗣️ Our Speech / Nuestro discurso</h2>
+    <p class="en">This is our oral presentation. We follow the school model and complete the sentences with the vocabulary from the bank. Use the buttons to change the civilization.</p>
+    <p class="es">Esta es nuestra presentación oral. Seguimos el modelo del colegio y completamos las oraciones con el vocabulario del banco. Usen los botones para cambiar la civilización.</p>
+
+    <div class="topic-box">
+      <div class="field"><b>Our topic:</b> Clothes <span class="speech-note">(Vestimenta)</span></div>
+      <div class="field"><b>Our civilization:</b>
+        <span class="civ-toggle">
+          <button id="btnGreece" class="active">Ancient Greece</button>
+          <button id="btnRome">Ancient Rome</button>
+        </span>
+      </div>
+    </div>
+
+    <div class="legend">
+      <span><i style="background:#1f6fbf"></i> Nouns (sustantivos)</span>
+      <span><i style="background:#2f8f4e"></i> Adjectives (adjetivos)</span>
+      <span><i style="background:#c1571f"></i> Verbs (verbos)</span>
+    </div>
+
+    <div class="speech-line s-maria">
+      <span class="who">María Paz</span><span class="gram">Sentence 1 · topic + civilization</span>
+      <p>Hello! Today we are going to talk about <b class="n">clothes</b> in Ancient <b class="n civ-greece">Greece</b><b class="n civ-rome">Rome</b>.</p>
+      <p class="es">¡Hola! Hoy vamos a hablar sobre la vestimenta en la Antigua Grecia / Roma.</p>
+    </div>
+
+    <div class="speech-line s-maria">
+      <span class="who">María Paz</span><span class="gram">Sentence 2 · two adjectives</span>
+      <p>It was very <b class="adj">ancient</b> and <b class="adj civ-greece">beautiful</b><b class="adj civ-rome">famous</b>.</p>
+      <p class="es">Era muy antigua y hermosa (Grecia) / famosa (Roma).</p>
+    </div>
+
+    <div class="speech-line s-isidora">
+      <span class="who">Isidora</span><span class="gram">Sentence 3 · nouns</span>
+      <p><b class="n">People</b> had <b class="n">wool</b>, <b class="n civ-greece">linen</b><b class="n civ-rome">togas</b>, <b class="n civ-greece">chitons</b><b class="n civ-rome">tunicas</b> and <b class="n">sandals</b>.</p>
+      <p class="es">La gente tenía lana, lino/togas, chitones/túnicas y sandalias.</p>
+    </div>
+
+    <div class="speech-line s-isidora">
+      <span class="who">Isidora</span><span class="gram">Sentence 4 · verbs</span>
+      <p>They could <b class="v">wear</b>, <b class="v">buy</b> and <b class="v">trade</b> clothes.</p>
+      <p class="es">Podían usar, comprar y comerciar ropa.</p>
+    </div>
+
+    <div class="speech-line s-javier">
+      <span class="who">Javier</span><span class="gram">Sentence 5 · why it was important</span>
+      <p>It was an <b class="adj">important</b> part of life because clothes showed who you were: rich or poor, <b class="n">citizen</b> or <b class="n">slave</b>. Today, clothes still show our style and our culture.</p>
+      <p class="es">Era una parte importante de la vida porque la ropa mostraba quién eras: rico o pobre, ciudadano o esclavo. Hoy, la ropa todavía muestra nuestro estilo y nuestra cultura.</p>
+    </div>
+
+    <div class="speech-line s-all">
+      <span class="who">All together</span><span class="gram">Closing</span>
+      <p>Thank you for listening!</p>
+      <p class="es">¡Gracias por escuchar!</p>
+    </div>
+
+    <div class="card">
+      <h3>Vocabulary Bank / Banco de palabras</h3>
+      <table class="vocab">
+        <tr><th>Nouns</th><th>Adjectives</th><th>Verbs</th></tr>
+        <tr>
+          <td><span class="n">food</span> · ships · coins · <span class="used">people</span> · buildings · soldiers · temples · games</td>
+          <td><span class="used">ancient</span> · big · small · strong · <span class="used">important</span> · <span class="used">famous</span> · <span class="used">beautiful</span> · old</td>
+          <td><span class="used">trade</span> · eat · <span class="used">wear</span> · build · fight · travel · <span class="used">buy</span> · live</td>
+        </tr>
+      </table>
+      <p class="speech-note" style="margin-top:10px;">The highlighted words are the ones we use in our speech. / Las palabras resaltadas son las que usamos en nuestro discurso.</p>
+      <p class="speech-note"><b>Extra words for our topic:</b> chiton, peplos, himation (Greece) · tunica, toga, stola, palla (Rome) · wool, linen, sandals, brooch.</p>
+    </div>
+
+    <div class="card">
+      <h3>Who says what / Quién dice qué</h3>
+      <table>
+        <tr><th>Student</th><th>Sentences</th><th>Category</th></tr>
+        <tr><td>María Paz</td><td>1 and 2</td><td>topic + adjectives</td></tr>
+        <tr><td>Isidora</td><td>3 and 4</td><td>nouns + verbs</td></tr>
+        <tr><td>Javier</td><td>5</td><td>why it was important</td></tr>
+        <tr><td>All together</td><td>Closing</td><td>Thank you for listening!</td></tr>
+      </table>
+      <p class="speech-note" style="margin-top:10px;">Tip: you can swap the sentences between students if you want. / Pueden intercambiar las oraciones entre los estudiantes si quieren.</p>
+    </div>
+  </section>
+
   <!-- ============ SOURCES ============ -->
   <section id="page-sources" class="page">
     <h2>📚 Sources / Fuentes</h2>
@@ -651,6 +767,18 @@
   langBtn.addEventListener('click', ()=>{
     document.body.classList.toggle('show-es');
     langBtn.textContent = document.body.classList.contains('show-es') ? 'Ocultar español' : 'Mostrar español';
+  });
+
+  // Civilization toggle (Speech)
+  const btnGreece = document.getElementById('btnGreece');
+  const btnRome = document.getElementById('btnRome');
+  btnGreece.addEventListener('click', ()=>{
+    document.body.classList.remove('civ-rome-on');
+    btnGreece.classList.add('active'); btnRome.classList.remove('active');
+  });
+  btnRome.addEventListener('click', ()=>{
+    document.body.classList.add('civ-rome-on');
+    btnRome.classList.add('active'); btnGreece.classList.remove('active');
   });
 
   // Game
