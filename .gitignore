@@ -1,0 +1,9 @@
+# Memoria local del agente (no se sube)
+.openhands/
+
+# Vercel
+.vercel/
+
+# Basura del sistema
+.DS_Store
+Thumbs.db
