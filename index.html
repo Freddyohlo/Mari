@@ -140,6 +140,10 @@
   .vocab td{vertical-align:top;line-height:1.9;}
   .used{background:#fff2b8;border-radius:4px;padding:1px 6px;font-weight:bold;color:#7a5c00;}
   .speech-note{font-size:.9rem;color:var(--muted);}
+  .speech-line{border-left:5px solid var(--gold);}
+  .pron{display:none;margin-top:4px;padding-left:12px;border-left:3px solid #9fd0ff;color:#1f6fbf;font-size:1rem;}
+  body.show-es .pron{display:block;}
+  .pron .pl{font-size:.75rem;text-transform:uppercase;letter-spacing:.5px;color:#6b8bbf;display:block;margin-bottom:2px;}
 </style>
 </head>
 <body>
@@ -631,40 +635,46 @@
       <span><i style="background:#c1571f"></i> Verbs (verbos)</span>
     </div>
 
-    <div class="speech-line s-maria">
+    <div class="speech-line s-maria" data-who-rome="María Paz" data-who-greece="Isidora">
       <span class="who">María Paz</span><span class="gram">Sentence 1 · topic + civilization</span>
       <p>Hello! Today we are going to talk about <b class="n">clothes</b> in Ancient <b class="n civ-greece">Greece</b><b class="n civ-rome">Rome</b>.</p>
       <p class="es">¡Hola! Hoy vamos a hablar sobre la vestimenta en la Antigua Grecia / Roma.</p>
+      <p class="pron"><span class="pl">Pronunciation / Pronunciación</span>Jelóu! Tudéi ui ar góuing tu tóok abáut <b>clóudz</b> in Éinshent <b class="civ-greece">Grís</b><b class="civ-rome">Róum</b>.</p>
     </div>
 
-    <div class="speech-line s-maria">
+    <div class="speech-line s-maria" data-who-rome="María Paz" data-who-greece="Isidora">
       <span class="who">María Paz</span><span class="gram">Sentence 2 · two adjectives</span>
       <p>It was very <b class="adj">ancient</b> and <b class="adj civ-greece">beautiful</b><b class="adj civ-rome">famous</b>.</p>
       <p class="es">Era muy antigua y hermosa (Grecia) / famosa (Roma).</p>
+      <p class="pron"><span class="pl">Pronunciation / Pronunciación</span>It uós véri <b>éinshent</b> end <b class="civ-greece">biútiful</b><b class="civ-rome">féimos</b>.</p>
     </div>
 
-    <div class="speech-line s-isidora">
+    <div class="speech-line s-isidora" data-who-rome="María Paz" data-who-greece="Isidora">
       <span class="who">Isidora</span><span class="gram">Sentence 3 · nouns</span>
       <p><b class="n">People</b> had <b class="n">wool</b>, <b class="n civ-greece">linen</b><b class="n civ-rome">togas</b>, <b class="n civ-greece">chitons</b><b class="n civ-rome">tunicas</b> and <b class="n">sandals</b>.</p>
       <p class="es">La gente tenía lana, lino/togas, chitones/túnicas y sandalias.</p>
+      <p class="pron"><span class="pl">Pronunciation / Pronunciación</span><b>Pípol</b> jad <b>uúl</b>, <b class="civ-greece">láinen</b><b class="civ-rome">tógas</b>, <b class="civ-greece">káitons</b><b class="civ-rome">túnicas</b> end <b>sándals</b>.</p>
     </div>
 
-    <div class="speech-line s-isidora">
+    <div class="speech-line s-isidora" data-who-rome="María Paz" data-who-greece="Isidora">
       <span class="who">Isidora</span><span class="gram">Sentence 4 · verbs</span>
       <p>They could <b class="v">wear</b>, <b class="v">buy</b> and <b class="v">trade</b> clothes.</p>
       <p class="es">Podían usar, comprar y comerciar ropa.</p>
+      <p class="pron"><span class="pl">Pronunciation / Pronunciación</span>Déi kud <b>uér</b>, <b>bái</b> end <b>tréid</b> clóudz.</p>
     </div>
 
-    <div class="speech-line s-javier">
+    <div class="speech-line s-javier" data-who-rome="Javier" data-who-greece="Javier">
       <span class="who">Javier</span><span class="gram">Sentence 5 · why it was important</span>
       <p>It was an <b class="adj">important</b> part of life because clothes showed who you were: rich or poor, <b class="n">citizen</b> or <b class="n">slave</b>. Today, clothes still show our style and our culture.</p>
       <p class="es">Era una parte importante de la vida porque la ropa mostraba quién eras: rico o pobre, ciudadano o esclavo. Hoy, la ropa todavía muestra nuestro estilo y nuestra cultura.</p>
+      <p class="pron"><span class="pl">Pronunciation / Pronunciación</span>It uós an <b>impórtant</b> part of láif bikós clóudz shóud ju iú uér: rich or pur, <b>sítisen</b> or <b>esléiv</b>. Tudéi, clóudz stil shóu áur stáil end áur cólchur.</p>
     </div>
 
     <div class="speech-line s-all">
       <span class="who">All together</span><span class="gram">Closing</span>
       <p>Thank you for listening!</p>
       <p class="es">¡Gracias por escuchar!</p>
+      <p class="pron"><span class="pl">Pronunciation / Pronunciación</span><b>Zenk iú</b> for <b>lísening</b>!</p>
     </div>
 
     <div class="card">
@@ -684,13 +694,12 @@
     <div class="card">
       <h3>Who says what / Quién dice qué</h3>
       <table>
-        <tr><th>Student</th><th>Sentences</th><th>Category</th></tr>
-        <tr><td>María Paz</td><td>1 and 2</td><td>topic + adjectives</td></tr>
-        <tr><td>Isidora</td><td>3 and 4</td><td>nouns + verbs</td></tr>
-        <tr><td>Javier</td><td>5</td><td>why it was important</td></tr>
-        <tr><td>All together</td><td>Closing</td><td>Thank you for listening!</td></tr>
+        <tr><th>Civilization</th><th>Sentences 1–4</th><th>Sentence 5</th></tr>
+        <tr><td>Ancient Rome</td><td><b>María Paz</b></td><td><b>Javier</b></td></tr>
+        <tr><td>Ancient Greece</td><td><b>Isidora</b></td><td><b>Javier</b></td></tr>
       </table>
-      <p class="speech-note" style="margin-top:10px;">Tip: you can swap the sentences between students if you want. / Pueden intercambiar las oraciones entre los estudiantes si quieren.</p>
+      <p class="speech-note" style="margin-top:10px;">Javier always closes with sentence 5. / Javier siempre cierra con la oración 5.</p>
+      <p class="speech-note">The names in the sentences change automatically when you choose Greece or Rome. / Los nombres de las oraciones cambian solos al elegir Grecia o Roma.</p>
     </div>
   </section>
 
@@ -772,14 +781,27 @@
   // Civilization toggle (Speech)
   const btnGreece = document.getElementById('btnGreece');
   const btnRome = document.getElementById('btnRome');
+  function applyCiv(){
+    const greece = document.body.classList.contains('civ-rome-on') ? false : true;
+    document.querySelectorAll('.speech-line[data-who-rome]').forEach(line=>{
+      const who = greece ? line.dataset.whoGreece : line.dataset.whoRome;
+      const whoEl = line.querySelector('.who');
+      whoEl.textContent = who;
+      line.classList.remove('s-maria','s-isidora','s-javier');
+      line.classList.add(who === 'Isidora' ? 's-isidora' : who === 'María Paz' ? 's-maria' : 's-javier');
+    });
+  }
   btnGreece.addEventListener('click', ()=>{
     document.body.classList.remove('civ-rome-on');
     btnGreece.classList.add('active'); btnRome.classList.remove('active');
+    applyCiv();
   });
   btnRome.addEventListener('click', ()=>{
     document.body.classList.add('civ-rome-on');
     btnRome.classList.add('active'); btnGreece.classList.remove('active');
+    applyCiv();
   });
+  applyCiv();
 
   // Game
   const facts = {
