@@ -123,6 +123,18 @@
   .legend span{display:flex;align-items:center;gap:6px;}
   .legend i{width:14px;height:14px;border-radius:4px;display:inline-block;}
   .speech-line{border-left:5px solid var(--line);padding:10px 0 10px 16px;margin:16px 0;}
+  .speech-line{display:flex;gap:16px;align-items:flex-start;}
+  .speech-line .body{flex:1 1 auto;min-width:0;}
+  .speech-line .icon{flex:0 0 76px;width:76px;height:76px;display:flex;align-items:center;justify-content:center;background:#fff;border:2px solid var(--line);border-radius:16px;}
+  .speech-line .icon svg{width:56px;height:56px;}
+  .speech-line .icon .civ-rome{display:none;}
+  body.civ-rome-on .speech-line .icon .civ-greece{display:none;}
+  body.civ-rome-on .speech-line .icon .civ-rome{display:block;}
+  @media(max-width:600px){
+    .speech-line{gap:10px;}
+    .speech-line .icon{flex-basis:56px;width:56px;height:56px;border-radius:12px;}
+    .speech-line .icon svg{width:42px;height:42px;}
+  }
   .speech-line .who{font-weight:bold;color:var(--terracotta);font-size:.9rem;letter-spacing:.5px;}
   .speech-line .gram{font-size:.75rem;color:var(--muted);text-transform:uppercase;letter-spacing:.5px;margin-left:8px;}
   .speech-line p{margin:6px 0 0;font-size:1.12rem;}
@@ -355,45 +367,103 @@
     </div>
 
     <div class="speech-line s-maria" data-who-rome="María Paz" data-who-greece="Isidora">
-      <span class="who">María Paz</span><span class="gram">Sentence 1 · topic + civilization</span>
-      <p>Hello! Today we are going to talk about <b class="n">clothes</b> in Ancient <b class="n civ-greece">Greece</b><b class="n civ-rome">Rome</b>.</p>
-      <p class="es">¡Hola! Hoy vamos a hablar sobre la vestimenta en la Antigua Grecia / Roma.</p>
-      <p class="pron"><span class="pl">Pronunciation / Pronunciación</span>Jelóu! Tudéi ui ar góuing tu tóok abáut <b>clóudz</b> in Éinshent <b class="civ-greece">Grís</b><b class="civ-rome">Róum</b>.</p>
+      <div class="icon">
+        <svg class="civ-greece" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
+          <rect x="18" y="12" width="24" height="6" fill="#c9a227"/>
+          <rect x="20" y="18" width="20" height="30" fill="#f6efe2" stroke="#cdbfa5" stroke-width="2"/>
+          <path d="M26,18 v30 M30,18 v30 M34,18 v30" stroke="#cdbfa5" stroke-width="2"/>
+          <rect x="16" y="48" width="28" height="6" fill="#c9a227"/>
+        </svg>
+        <svg class="civ-rome" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
+          <path d="M14,14 Q30,26 46,14 L48,44 L12,44 Z" fill="#faf6ec" stroke="#d9cdb2" stroke-width="2"/>
+          <path d="M14,14 L46,14 L42,26 L18,30 Z" fill="#efe6d0"/>
+          <rect x="14" y="32" width="34" height="6" fill="#6b2d8b" opacity=".85"/>
+        </svg>
+      </div>
+      <div class="body">
+        <span class="who">María Paz</span><span class="gram">Sentence 1 · topic + civilization</span>
+        <p>Hello! Today we are going to talk about <b class="n">clothes</b> in Ancient <b class="n civ-greece">Greece</b><b class="n civ-rome">Rome</b>.</p>
+        <p class="es">¡Hola! Hoy vamos a hablar sobre la vestimenta en la Antigua Grecia / Roma.</p>
+        <p class="pron"><span class="pl">Pronunciation / Pronunciación</span>Jelóu! Tudéi ui ar góuing tu tóok abáut <b>clóudz</b> in Éinshent <b class="civ-greece">Grís</b><b class="civ-rome">Róum</b>.</p>
+      </div>
     </div>
 
     <div class="speech-line s-maria" data-who-rome="María Paz" data-who-greece="Isidora">
-      <span class="who">María Paz</span><span class="gram">Sentence 2 · two adjectives</span>
-      <p>It was very <b class="adj">ancient</b> and <b class="adj civ-greece">beautiful</b><b class="adj civ-rome">famous</b>.</p>
-      <p class="es">Era muy antigua y hermosa (Grecia) / famosa (Roma).</p>
-      <p class="pron"><span class="pl">Pronunciation / Pronunciación</span>It uós véri <b>éinshent</b> end <b class="civ-greece">biútiful</b><b class="civ-rome">féimos</b>.</p>
+      <div class="icon">
+        <svg viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
+          <path d="M30,8 L36,24 L53,24 L39,34 L44,51 L30,41 L16,51 L21,34 L7,24 L24,24 Z" fill="#e8c34a" stroke="#a8862a" stroke-width="2" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <div class="body">
+        <span class="who">María Paz</span><span class="gram">Sentence 2 · two adjectives</span>
+        <p>It was very <b class="adj">ancient</b> and <b class="adj civ-greece">beautiful</b><b class="adj civ-rome">famous</b>.</p>
+        <p class="es">Era muy antigua y hermosa (Grecia) / famosa (Roma).</p>
+        <p class="pron"><span class="pl">Pronunciation / Pronunciación</span>It uós véri <b>éinshent</b> end <b class="civ-greece">biútiful</b><b class="civ-rome">féimos</b>.</p>
+      </div>
     </div>
 
     <div class="speech-line s-isidora" data-who-rome="María Paz" data-who-greece="Isidora">
-      <span class="who">Isidora</span><span class="gram">Sentence 3 · nouns</span>
-      <p><b class="n">People</b> had <b class="n">wool</b>, <b class="n civ-greece">linen</b><b class="n civ-rome">togas</b>, <b class="n civ-greece">chitons</b><b class="n civ-rome">tunicas</b> and <b class="n">sandals</b>.</p>
-      <p class="es">La gente tenía lana, lino/togas, chitones/túnicas y sandalias.</p>
-      <p class="pron"><span class="pl">Pronunciation / Pronunciación</span><b>Pípol</b> jad <b>uúl</b>, <b class="civ-greece">láinen</b><b class="civ-rome">tógas</b>, <b class="civ-greece">káitons</b><b class="civ-rome">túnicas</b> end <b>sándals</b>.</p>
+      <div class="icon">
+        <svg viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="30" cy="30" r="18" fill="#f4f4f4" stroke="#cdbfa5" stroke-width="2"/>
+          <path d="M18,24 Q30,36 42,24 M18,36 Q30,24 42,36" fill="none" stroke="#cdbfa5" stroke-width="2"/>
+        </svg>
+      </div>
+      <div class="body">
+        <span class="who">Isidora</span><span class="gram">Sentence 3 · nouns</span>
+        <p><b class="n">People</b> had <b class="n">wool</b>, <b class="n civ-greece">linen</b><b class="n civ-rome">togas</b>, <b class="n civ-greece">chitons</b><b class="n civ-rome">tunicas</b> and <b class="n">sandals</b>.</p>
+        <p class="es">La gente tenía lana, lino/togas, chitones/túnicas y sandalias.</p>
+        <p class="pron"><span class="pl">Pronunciation / Pronunciación</span><b>Pípol</b> jad <b>uúl</b>, <b class="civ-greece">láinen</b><b class="civ-rome">tógas</b>, <b class="civ-greece">káitons</b><b class="civ-rome">túnicas</b> end <b>sándals</b>.</p>
+      </div>
     </div>
 
     <div class="speech-line s-isidora" data-who-rome="María Paz" data-who-greece="Isidora">
-      <span class="who">Isidora</span><span class="gram">Sentence 4 · verbs</span>
-      <p>They could <b class="v">wear</b>, <b class="v">buy</b> and <b class="v">trade</b> clothes.</p>
-      <p class="es">Podían usar, comprar y comerciar ropa.</p>
-      <p class="pron"><span class="pl">Pronunciation / Pronunciación</span>Déi kud <b>uér</b>, <b>bái</b> end <b>tréid</b> clóudz.</p>
+      <div class="icon">
+        <svg viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
+          <ellipse cx="24" cy="34" rx="15" ry="7" fill="#e8c34a" stroke="#a8862a" stroke-width="2"/>
+          <ellipse cx="34" cy="24" rx="15" ry="7" fill="#f0d774" stroke="#a8862a" stroke-width="2"/>
+          <circle cx="34" cy="24" r="3" fill="#a8862a"/>
+        </svg>
+      </div>
+      <div class="body">
+        <span class="who">Isidora</span><span class="gram">Sentence 4 · verbs</span>
+        <p>They could <b class="v">wear</b>, <b class="v">buy</b> and <b class="v">trade</b> clothes.</p>
+        <p class="es">Podían usar, comprar y comerciar ropa.</p>
+        <p class="pron"><span class="pl">Pronunciation / Pronunciación</span>Déi kud <b>uér</b>, <b>bái</b> end <b>tréid</b> clóudz.</p>
+      </div>
     </div>
 
     <div class="speech-line s-javier" data-who-rome="Javier" data-who-greece="Javier">
-      <span class="who">Javier</span><span class="gram">Sentence 5 · why it was important</span>
-      <p>It was an <b class="adj">important</b> part of life because clothes showed who you were: rich or poor, <b class="n">citizen</b> or <b class="n">slave</b>. Today, clothes still show our style and our culture.</p>
-      <p class="es">Era una parte importante de la vida porque la ropa mostraba quién eras: rico o pobre, ciudadano o esclavo. Hoy, la ropa todavía muestra nuestro estilo y nuestra cultura.</p>
-      <p class="pron"><span class="pl">Pronunciation / Pronunciación</span>It uós an <b>impórtant</b> part of láif bikós clóudz shóud ju iú uér: rich or pur, <b>sítisen</b> or <b>esléiv</b>. Tudéi, clóudz stil shóu áur stáil end áur cólchur.</p>
+      <div class="icon">
+        <svg viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="30" cy="20" r="9" fill="#f1c9a5" stroke="#c08b5c" stroke-width="2"/>
+          <path d="M14,52 Q30,32 46,52 Z" fill="#f6efe2" stroke="#cdbfa5" stroke-width="2"/>
+          <path d="M18,20 q12,-10 24,0" fill="none" stroke="#e8c34a" stroke-width="3"/>
+        </svg>
+      </div>
+      <div class="body">
+        <span class="who">Javier</span><span class="gram">Sentence 5 · why it was important</span>
+        <p>It was an <b class="adj">important</b> part of life because clothes showed who you were: rich or poor, <b class="n">citizen</b> or <b class="n">slave</b>. Today, clothes still show our style and our culture.</p>
+        <p class="es">Era una parte importante de la vida porque la ropa mostraba quién eras: rico o pobre, ciudadano o esclavo. Hoy, la ropa todavía muestra nuestro estilo y nuestra cultura.</p>
+        <p class="pron"><span class="pl">Pronunciation / Pronunciación</span>It uós an <b>impórtant</b> part of láif bikós clóudz shóud ju iú uér: rich or pur, <b>sítisen</b> or <b>esléiv</b>. Tudéi, clóudz stil shóu áur stáil end áur cólchur.</p>
+      </div>
     </div>
 
     <div class="speech-line s-all">
-      <span class="who">All together</span><span class="gram">Closing</span>
-      <p>Thank you for listening!</p>
-      <p class="es">¡Gracias por escuchar!</p>
-      <p class="pron"><span class="pl">Pronunciation / Pronunciación</span><b>Zenk iú</b> for <b>lísening</b>!</p>
+      <div class="icon">
+        <svg viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
+          <path d="M10,14 h40 a6,6 0 0 1 6,6 v16 a6,6 0 0 1 -6,6 h-20 l-12,10 v-10 h-8 a6,6 0 0 1 -6,-6 v-16 a6,6 0 0 1 6,-6 z" fill="#d9e3f0" stroke="#8ea6c9" stroke-width="2"/>
+          <circle cx="22" cy="28" r="3" fill="#8ea6c9"/>
+          <circle cx="30" cy="28" r="3" fill="#8ea6c9"/>
+          <circle cx="38" cy="28" r="3" fill="#8ea6c9"/>
+        </svg>
+      </div>
+      <div class="body">
+        <span class="who">All together</span><span class="gram">Closing</span>
+        <p>Thank you for listening!</p>
+        <p class="es">¡Gracias por escuchar!</p>
+        <p class="pron"><span class="pl">Pronunciation / Pronunciación</span><b>Zenk iú</b> for <b>lísening</b>!</p>
+      </div>
     </div>
 
     <div class="card">
